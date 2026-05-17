@@ -109,6 +109,10 @@ finance-tracker/
 
 Add your project screenshots inside:
 docs/screenshots/
+<img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/e28141ed-58cf-4e46-b7ca-4791ab424a2d" />
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/c0979c20-a0f2-478b-a154-89d50871d11a" />
+
+
 
 ---
 
@@ -159,7 +163,7 @@ https://vercel.com
 
 # 👨‍💻 Author
 
-Your Name
+Raj Suryawanshi
 
 ---
 
@@ -170,7 +174,7 @@ https://github.com/rajsuryawanshi2005/finance_tracker
 
 # 🌍 Live Demo
 
-https://your-finance-tracker.netlify.app
+https://fintraack.netlify.app/
 
 ---
 
