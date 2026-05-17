@@ -1,0 +1,134 @@
+/* =========================
+   TABLE SECTION
+========================= */
+
+.expense-table-section {
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.table-wrapper {
+
+    overflow-x: auto;
+
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+/* =========================
+   TABLE HEAD
+========================= */
+
+thead {
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+thead th {
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-weight: 600;
+
+    color: white;
+
+}
+
+/* =========================
+   TABLE BODY
+========================= */
+
+tbody tr {
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    transition: var(--transition-normal);
+
+}
+
+tbody tr:hover {
+
+    background: rgba(255,255,255,0.05);
+
+}
+
+tbody td {
+
+    padding: 18px;
+
+    color: var(--text-secondary);
+
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.edit-btn,
+.delete-btn {
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    margin-right: 8px;
+
+    transition: var(--transition-normal);
+
+}
+
+.edit-btn {
+
+    background: var(--primary-gradient);
+
+}
+
+.delete-btn {
+
+    background: var(--danger-gradient);
+
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/* =========================
+   EMPTY TABLE
+========================= */
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: var(--text-secondary);
+
+}

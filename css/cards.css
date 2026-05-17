@@ -1,0 +1,115 @@
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome-section {
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.welcome-section h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+.welcome-section p {
+
+    color: var(--text-secondary);
+
+}
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+.cards-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    padding: 25px;
+
+    border-radius: var(--radius-lg);
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(20px);
+
+    transition: var(--transition-normal);
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.card-icon {
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 18px;
+
+    background: var(--primary-gradient);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+}
+
+.card-info h3 {
+
+    color: var(--text-secondary);
+
+    margin-bottom: 12px;
+
+}
+
+.card-info h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+.card-info span {
+
+    color: var(--green);
+
+    font-size: 14px;
+
+}

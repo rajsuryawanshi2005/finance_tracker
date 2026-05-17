@@ -1,0 +1,129 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    padding: 10px 0;
+
+    backdrop-filter: blur(10px);
+
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+
+    width: 350px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: var(--radius-md);
+
+    padding: 12px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.search-box input {
+
+    width: 100%;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+.search-box i {
+
+    color: var(--text-secondary);
+
+}
+
+/* =========================
+   NAV RIGHT
+========================= */
+
+.nav-right {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--primary-gradient);
+
+    color: white;
+
+    transition: var(--transition-normal);
+
+}
+
+.theme-toggle:hover {
+
+    transform: rotate(180deg);
+
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile img {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--blue);
+
+}
+
+/* =========================
+   MENU TOGGLE
+========================= */
+
+.menu-toggle {
+
+    display: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+}

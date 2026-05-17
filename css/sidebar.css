@@ -1,0 +1,103 @@
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+
+    width: 260px;
+
+    height: 100vh;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    padding: 25px;
+
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(20px);
+
+    border-right: 1px solid var(--glass-border);
+
+    z-index: 1000;
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 40px;
+
+}
+
+.logo i {
+
+    font-size: 30px;
+
+    color: var(--blue);
+
+}
+
+.logo h2 {
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-links {
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+}
+
+.nav-links a {
+
+    padding: 15px 18px;
+
+    border-radius: var(--radius-md);
+
+    color: var(--text-secondary);
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    transition: var(--transition-normal);
+
+    font-weight: 500;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    background: var(--primary-gradient);
+
+    color: white;
+
+    transform: translateX(5px);
+
+}
+
+.nav-links i {
+
+    font-size: 18px;
+
+}

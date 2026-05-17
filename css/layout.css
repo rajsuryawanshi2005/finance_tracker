@@ -1,0 +1,164 @@
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+body {
+
+    display: flex;
+
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+
+    margin-left: 260px;
+
+    width: calc(100% - 260px);
+
+    padding: 30px;
+
+    transition: var(--transition-normal);
+
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+
+.glass {
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+
+    margin-bottom: 20px;
+
+}
+
+.section-header h2 {
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.primary-btn {
+
+    background: var(--primary-gradient);
+
+    color: white;
+
+    padding: 14px 24px;
+
+    border-radius: var(--radius-md);
+
+    font-weight: 600;
+
+    transition: var(--transition-normal);
+
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 20px rgba(59,130,246,0.35);
+
+}
+
+/* =========================
+   FLOATING BUTTON
+========================= */
+
+.floating-btn {
+
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: var(--primary-gradient);
+
+    color: white;
+
+    font-size: 24px;
+
+    z-index: 999;
+
+    box-shadow:
+        0 10px 25px rgba(59,130,246,0.4);
+
+    transition: var(--transition-normal);
+
+}
+
+.floating-btn:hover {
+
+    transform: scale(1.1) rotate(90deg);
+
+}
+
+/* =========================
+   TOAST
+========================= */
+
+#toast {
+
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    background: var(--green);
+
+    color: white;
+
+    padding: 16px 24px;
+
+    border-radius: var(--radius-md);
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: var(--transition-normal);
+
+    z-index: 10000;
+
+}
+
+#toast.show {
+
+    opacity: 1;
+
+}

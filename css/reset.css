@@ -1,0 +1,134 @@
+/* =========================
+   CSS RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   HTML
+========================= */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family: var(--font-primary);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg-primary),
+            var(--bg-secondary),
+            var(--bg-tertiary)
+        );
+
+    color: var(--text-primary);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+
+    outline: none;
+
+    border: none;
+
+    font-family: inherit;
+
+}
+
+/* =========================
+   LISTS
+========================= */
+
+ul,
+ol {
+
+    list-style: none;
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--bg-secondary);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--blue);
+
+    border-radius: 20px;
+
+}

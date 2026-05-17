@@ -1,0 +1,133 @@
+/* =========================
+   BUDGET SECTION
+========================= */
+
+.budget-section {
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+.budget-content {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.expense-form-section {
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+   EXPENSE FORM
+========================= */
+
+#expenseForm {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: var(--radius-md);
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid var(--glass-border);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: var(--transition-normal);
+
+}
+
+input:focus,
+select:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 10px rgba(59,130,246,0.3);
+
+}
+
+input::placeholder {
+
+    color: var(--text-secondary);
+
+}
+
+/* =========================
+   SELECT OPTIONS
+========================= */
+
+select option {
+
+    background: var(--bg-secondary);
+
+    color: white;
+
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 18px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+.progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: var(--success-gradient);
+
+    transition: width 0.5s ease;
+
+}

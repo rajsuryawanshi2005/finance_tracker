@@ -1,0 +1,101 @@
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode {
+
+    --bg-primary: #f8fafc;
+    --bg-secondary: #e2e8f0;
+    --bg-tertiary: #cbd5e1;
+
+    --glass-bg: rgba(255,255,255,0.7);
+    --glass-border: rgba(0,0,0,0.08);
+
+    --text-primary: #111827;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #e2e8f0,
+            #cbd5e1
+        );
+
+    color: var(--text-primary);
+
+}
+
+/* =========================
+   LIGHT MODE GLASS
+========================= */
+
+body.light-mode .glass,
+body.light-mode .card,
+body.light-mode .sidebar {
+
+    background: rgba(255,255,255,0.65);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(0,0,0,0.08);
+
+}
+
+/* =========================
+   LIGHT MODE INPUTS
+========================= */
+
+body.light-mode input,
+body.light-mode select {
+
+    background: rgba(255,255,255,0.8);
+
+    color: #111827;
+
+}
+
+/* =========================
+   LIGHT MODE TABLE
+========================= */
+
+body.light-mode thead {
+
+    background: rgba(0,0,0,0.05);
+
+}
+
+body.light-mode tbody tr:hover {
+
+    background: rgba(0,0,0,0.03);
+
+}
+
+/* =========================
+   LIGHT MODE SEARCH BOX
+========================= */
+
+body.light-mode .search-box {
+
+    background: rgba(255,255,255,0.7);
+
+}
+
+body.light-mode .search-box input {
+
+    color: #111827;
+
+}
+
+/* =========================
+   LIGHT MODE TEXT
+========================= */
+
+body.light-mode .card-info h3,
+body.light-mode p,
+body.light-mode td {
+
+    color: var(--text-secondary);
+
+}

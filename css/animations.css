@@ -1,0 +1,184 @@
+/* =========================
+   FADE IN
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* =========================
+   SLIDE IN
+========================= */
+
+@keyframes slideIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+/* =========================
+   SCALE IN
+========================= */
+
+@keyframes scaleIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* =========================
+   FLOAT
+========================= */
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+/* =========================
+   GLOW
+========================= */
+
+@keyframes glow {
+
+    0% {
+
+        box-shadow:
+            0 0 5px rgba(59,130,246,0.3);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 20px rgba(59,130,246,0.6);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 5px rgba(59,130,246,0.3);
+
+    }
+
+}
+
+/* =========================
+   ELEMENT ANIMATIONS
+========================= */
+
+.card {
+
+    animation: fadeIn 0.8s ease;
+
+}
+
+.chart-card {
+
+    animation: scaleIn 0.8s ease;
+
+}
+
+.sidebar {
+
+    animation: slideIn 0.6s ease;
+
+}
+
+.floating-btn {
+
+    animation: floating 3s infinite ease-in-out;
+
+}
+
+.primary-btn:hover {
+
+    animation: glow 1.5s infinite;
+
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.card,
+.chart-card,
+.glass {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.card:hover,
+.chart-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.3);
+
+}

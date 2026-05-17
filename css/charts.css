@@ -1,0 +1,100 @@
+/* =========================
+   CHART SECTION
+========================= */
+
+.charts-section {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+   CHART CARD
+========================= */
+
+.chart-card {
+
+    padding: 25px;
+
+    border-radius: var(--radius-lg);
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* =========================
+   CHART TITLE
+========================= */
+
+.chart-card h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+
+}
+
+/* =========================
+   CANVAS
+========================= */
+
+.chart-card canvas {
+
+    width: 100% !important;
+
+    max-height: 350px;
+
+}
+
+/* =========================
+   RECENT ACTIVITY
+========================= */
+
+.recent-activity {
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+.activity-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+.activity-item {
+
+    padding: 16px;
+
+    border-radius: var(--radius-md);
+
+    background: rgba(255,255,255,0.05);
+
+    transition: var(--transition-normal);
+
+}
+
+.activity-item:hover {
+
+    background: rgba(255,255,255,0.08);
+
+}

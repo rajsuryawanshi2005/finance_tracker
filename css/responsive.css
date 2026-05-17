@@ -1,0 +1,171 @@
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .cards-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    .sidebar {
+
+        transform: translateX(-100%);
+
+        transition: 0.4s;
+
+    }
+
+    .sidebar.active {
+
+        transform: translateX(0);
+
+    }
+
+    .main-content {
+
+        margin-left: 0;
+
+        width: 100%;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+    .charts-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: stretch;
+
+    }
+
+    .search-box {
+
+        width: 100%;
+
+    }
+
+    .welcome-section {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+    .cards-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .budget-content {
+
+        flex-direction: column;
+
+    }
+
+    .charts-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .chart-card {
+
+        overflow-x: auto;
+
+    }
+
+    #expenseForm {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .main-content {
+
+        padding: 20px;
+
+    }
+
+    .welcome-section h1 {
+
+        font-size: 28px;
+
+    }
+
+    .card-info h2 {
+
+        font-size: 28px;
+
+    }
+
+    .floating-btn {
+
+        width: 55px;
+        height: 55px;
+
+        font-size: 20px;
+
+    }
+
+    .navbar {
+
+        margin-bottom: 20px;
+
+    }
+
+    .budget-section,
+    .expense-form-section,
+    .expense-table-section,
+    .chart-card,
+    .recent-activity {
+
+        padding: 20px;
+
+    }
+
+}

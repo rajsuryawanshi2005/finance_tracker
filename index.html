@@ -1,1 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+    <title>FinTrack - Finance Dashboard</title>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS FILES -->
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <h2>FinTrack</h2>
+
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#" class="active">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </a>
+
+            <a href="#expenseSection">
+
+                <i class="fa-solid fa-money-bill"></i>
+
+                Expenses
+
+            </a>
+
+            <a href="#analyticsSection">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Analytics
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= NAVBAR ================= -->
+
+        <header class="navbar">
+
+            <div class="menu-toggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-search"></i>
+
+                <input type="text"
+                    placeholder="Search expenses...">
+
+            </div>
+
+            <div class="nav-right">
+
+                <button class="theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="primary-btn"
+                    onclick="exportExpensesCSV()">
+
+                    Export CSV
+
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/100"
+                        alt="profile">
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-section glass">
+
+            <div>
+
+                <h1>Welcome Back 👋</h1>
+
+                <p>
+                    Track your expenses and manage your
+                    finances smartly with premium analytics.
+                </p>
+
+            </div>
+
+            <button class="primary-btn"
+                onclick="document.getElementById('title').focus()">
+
+                + Add Expense
+
+            </button>
+
+        </section>
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <section class="cards-container">
+
+            <div class="card total-expenses">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Total Expenses</h3>
+
+                    <h2>₹0</h2>
+
+                    <span>Updated Live</span>
+
+                </div>
+
+            </div>
+
+            <div class="card remaining-budget">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Remaining Budget</h3>
+
+                    <h2>₹0</h2>
+
+                    <span>Budget Status</span>
+
+                </div>
+
+            </div>
+
+            <div class="card monthly-budget">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-piggy-bank"></i>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Monthly Budget</h3>
+
+                    <h2>₹0</h2>
+
+                    <span>Monthly Limit</span>
+
+                </div>
+
+            </div>
+
+            <div class="card total-transactions">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Total Transactions</h3>
+
+                    <h2>0</h2>
+
+                    <span>Synced</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= BUDGET SECTION ================= -->
+
+        <section class="budget-section glass">
+
+            <div class="section-header">
+
+                <h2>Monthly Budget</h2>
+
+            </div>
+
+            <div class="budget-content">
+
+                <input type="number"
+                    id="budgetInput"
+                    placeholder="Enter Monthly Budget">
+
+                <button id="saveBudgetBtn"
+                    class="primary-btn">
+
+                    Save Budget
+
+                </button>
+
+            </div>
+
+            <div class="progress-container">
+
+                <div class="progress-bar"
+                    id="progressBar"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= EXPENSE FORM ================= -->
+
+        <section class="expense-form-section glass"
+            id="expenseSection">
+
+            <div class="section-header">
+
+                <h2>Add Expense</h2>
+
+            </div>
+
+            <form id="expenseForm">
+
+                <input type="text"
+                    id="title"
+                    placeholder="Expense Title">
+
+                <input type="number"
+                    id="amount"
+                    placeholder="Amount">
+
+                <select id="category">
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Health">Health</option>
+                    <option value="Education">Education</option>
+                    <option value="Others">Others</option>
+
+                </select>
+
+                <input type="date" id="date">
+
+                <button type="submit"
+                    class="primary-btn">
+
+                    Add Expense
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- ================= TABLE SECTION ================= -->
+
+        <section class="expense-table-section glass">
+
+            <div class="section-header">
+
+                <h2>Expense List</h2>
+
+            </div>
+
+            <!-- FILTERS -->
+
+            <div class="budget-content"
+                style="margin-bottom:20px;">
+
+                <select onchange="filterByCategory(this.value)">
+
+                    <option value="All">
+                        All Categories
+                    </option>
+
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Health">Health</option>
+                    <option value="Education">Education</option>
+                    <option value="Others">Others</option>
+
+                </select>
+
+                <button class="primary-btn"
+                    onclick="sortByAmount()">
+
+                    Sort by Amount
+
+                </button>
+
+                <button class="primary-btn"
+                    onclick="sortByDate()">
+
+                    Sort by Date
+
+                </button>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Title</th>
+
+                            <th>Amount</th>
+
+                            <th>Category</th>
+
+                            <th>Date</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="expenseTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ================= CHARTS ================= -->
+
+        <section class="charts-section"
+            id="analyticsSection">
+
+            <div class="chart-card glass">
+
+                <h2>Expense Categories</h2>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+            <div class="chart-card glass">
+
+                <h2>Monthly Expenses</h2>
+
+                <canvas id="barChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- ================= RECENT ACTIVITY ================= -->
+
+        <section class="recent-activity glass">
+
+            <div class="section-header">
+
+                <h2>Recent Activity</h2>
+
+            </div>
+
+            <div class="activity-list">
+
+                <div class="activity-item">
+
+                    <p>No recent activity available.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FLOATING BUTTON ================= -->
+
+    <button class="floating-btn">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- ================= TOAST ================= -->
+
+    <div id="toast"></div>
+
+    <!-- ================= JS FILES ================= -->
+
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/expenses.js"></script>
+    <script src="js/budget.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
