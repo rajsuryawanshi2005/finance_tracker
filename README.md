@@ -116,7 +116,7 @@ docs/screenshots/
 
 ## Clone Repository
 
-git clone https://github.com/your-username/finance-tracker.git
+git clone https://github.com/rajsuryawanshi2005/finance_tracker
 
 ---
 
@@ -165,8 +165,7 @@ Your Name
 
 # 🔗 GitHub Repository
 
-https://github.com/your-username/finance-tracker
-
+https://github.com/rajsuryawanshi2005/finance_tracker
 ---
 
 # 🌍 Live Demo
